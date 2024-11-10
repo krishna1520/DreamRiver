@@ -1,0 +1,32 @@
+.footer {
+  background-color: #2C2C2C; /* Dark Gray */
+  color: white; /* Text color for footer */
+  padding: 40px 0; /* Padding for the footer */
+}
+
+.footer h5 {
+  font-size: 18px; /* Heading font size */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+.footer p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.social-icons a {
+  color: white; /* Social icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-icons a:hover {
+  color: #FFD700; /* Yellow on hover */
+}
+
+.form-control {
+  border-radius: 20px; /* Rounded corners for input */
+}
+
+.btn-primary {
+  border-radius: 20px; /* Rounded corners for button */
+}

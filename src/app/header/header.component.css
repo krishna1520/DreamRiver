@@ -1,0 +1,77 @@
+/* Mobile Menu Styles */
+.mobile-menu {
+  background-color: #f8f9fa; /* Background color */
+  position: absolute; /* Position it under the navbar */
+  top: 56px; /* Adjust based on the height of your navbar */
+  left: 0;
+  right: 0;
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it appears above other elements */
+  border-top: 1px solid #ddd; /* Optional border */
+  animation: slideIn 0.3s ease-out forwards; /* Slide-in animation */
+}
+
+.mobile-menu.show {
+  display: block; /* Show when class added */
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  text-align: left; /* Align text to the left */
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid #ddd; /* Optional border */
+}
+
+.mobile-nav li a {
+  display: block; /* Make the whole area clickable */
+  padding: 15px 20px; /* Add padding for touch */
+  color: #000; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.25rem; /* Increased font size */
+}
+
+.mobile-nav li a:hover {
+  background-color: #f0f0f0; /* Hover effect */
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile View - Full Screen Navbar */
+@media (max-width: 767px) {
+
+
+  .navbar-toggler.collapsed + .navbar-collapse {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align text to the left */
+  }
+
+  .mobile-nav li {
+    margin: 15px 0;
+  }
+
+  .mobile-nav .nav-link {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}

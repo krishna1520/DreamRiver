@@ -1,0 +1,27 @@
+<div class="container mt-5 containet-box">
+  <h2 class="text-center p-4 mb-4">What Our Customer Say</h2>
+  <div id="testimonialCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div
+        class="carousel-item"
+        *ngFor="let testimonial of testimonials; let i = index"
+        [class.active]="i === 0"
+      >
+        <div class="testimonial-card text-center p-4">
+          <img [src]="testimonial.image" alt="{{ testimonial.name }}" class="testimonial-image mb-3 rounded-circle" />
+          <h5 class="testimonial-name">{{ testimonial.name }}</h5>
+          <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls -->
+    <button (click)="onPrev()" class="carousel-control-prev" type="button">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button (click)="onNext()" class="carousel-control-next" type="button">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.video-section {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}

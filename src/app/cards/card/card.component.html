@@ -1,0 +1,24 @@
+<div class="container mt-5 containet-box">
+  <h2 class="text-center p-4 mb-4">Discover Your Perfect Getaway at Our Serene Farmhouse</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let card of cards">
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInUp" style="transition: transform 0.2s;">
+        <div class="image-container">
+          <img src="{{card.image}}" class="card-img-top zoom-image" alt="{{card.title}}">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{card.title}}</h5>
+          <p class="card-text" [ngClass]="{ 'line-clamp': !card.showFullContent }">
+            {{ card.showFullContent ? card.content : (card.content | slice:0:100) + '...' }}
+          </p>
+          <ul *ngIf="card.showFullContent">
+            <li *ngFor="let feature of card.features">{{ feature }}</li>
+          </ul>
+          <button (click)="toggleContent(card)" class="btn btn-link">
+            {{ card.showFullContent ? 'Show Less' : 'Read More' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

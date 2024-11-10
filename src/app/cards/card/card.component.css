@@ -1,0 +1,40 @@
+.card {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Apply a zoom effect on hover */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* CSS to limit lines shown */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.containet-box{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 2%;
+  border-radius: 8px;
+}
+
+
+/* Optional: to ensure that the content displays correctly when expanded */
+.card-text {
+  transition: max-height 0.3s ease-in-out;
+}
+.image-container {
+  overflow: hidden;
+}
+
+.zoom-image {
+  transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+/* Zoom-in effect on hover */
+.zoom-image:hover {
+  transform: scale(1.1); /* Adjust scale as needed */
+}

@@ -1,0 +1,45 @@
+<div class="container mt-5 containet-box" id="AboutUs">
+  <h2 class="text-center p-4">{{ title }}</h2>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <!-- Display image initially, then hide when video starts -->
+      <img [src]="imageUrl" alt="Our Farmhouse" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6 p-2">
+      <h5>About Our Farmhouse</h5>
+      <p class="text-justify">{{ content }}</p>
+      <p>We offer:</p>
+      <ul>
+        <li>Spacious rooms with modern amenities</li>
+        <li>A beautiful garden and outdoor seating</li>
+        <li>One breakfast, One lunch & One Dinner Veg and Non-Veg Both are Available.</li>
+        <li>Family-friendly activities and local experiences</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <p>
+        Welcome to our Dream River Farmhouse. Enjoy breathtaking views and a serene environment. Relax by the pool or take a walk through the beautiful garden. This is your perfect getaway destination.
+      </p>
+      <p>
+        Our farmhouse is equipped with everything you need for a peaceful retreat. Come and experience the tranquility of nature while enjoying modern comforts.
+      </p>
+    </div>
+    <div class="col-md-6 video-container">
+      <!-- Video Section -->
+      <video
+        *ngIf="!showImage"
+        #videoPlayer
+        width="100%"
+        (ended)="onVideoEnd()"
+        [src]="currentVideo"
+        (click)="togglePlayPause()"
+        controls
+      ></video>
+    </div>
+
+
+  </div>
+</div>
